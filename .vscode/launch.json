@@ -1,0 +1,14 @@
+{
+    // IntelliSense를 사용하여 가능한 특성에 대해 알아보세요.
+    // 기존 특성에 대한 설명을 보려면 가리킵니다.
+    // 자세한 내용을 보려면 https://go.microsoft.com/fwlink/?linkid=830387을(를) 방문하세요.
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open ex01.html",
+            "file": "d:\\_231010_웹융합SW기반빅데이터솔루션개발자양성과정_정다빈\\3. html\\HTML_workspace\\day26\\ex01.html"
+        }
+    ]
+}
