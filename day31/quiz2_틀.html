@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body > div {
+            border: 2px dashed gray;
+        }
+        body > div > div {
+            border: 2px dashed red;
+        }
+        body > div > div > div {
+            border: 2px dashed green;
+        }
+        .frame {
+            width: 1400px;
+            margin: 0 auto;
+            padding: 50px 5px;
+        }
+        :sb {
+            display: flex;
+            justify-content: space-between;
+        }
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <!--줄 단위로 나누기-->
+    <div>첫줄
+        <div class="frame sb">
+            <div>왼쪽영어메뉴</div>
+            <div>오른쪽 한글메뉴</div>
+        </div>
+    </div>
+
+    <div>
+        <div class="frame center">
+            로고
+        </div>
+    </div>
+    
+    <div>
+        <div class="frame sb">
+            <div>아이콘</div>
+            <div>검색</div>
+        </div>
+    </div>
+
+    <div>
+        <div class="frame sb">
+            <div>메</div>
+            <div>뉴</div>
+            <div>네</div>
+            <div>비</div>
+            <div>게</div>
+            <div>이</div>
+            <div>터</div>
+        </div>
+    </div>
+
+    <div>
+        <div class="frame">
+            <img src="" alt="서유리">
+        </div>
+    </div>
+
+
+
+
+
+</body>
+</html>

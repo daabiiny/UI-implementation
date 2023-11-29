@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        div.root {
+            border: 2px solid black;
+            width: 900px;
+            margin: auto;
+        }
+        div.top {
+            background-color: lightgrey;
+            padding: 20px;
+        }
+        h1 {
+            width: fit-content;
+            margin: auto;
+            background-color: lightskyblue;
+            color: white;
+            padding: 10px;
+        }
+        div.mid {
+            display: flex;
+        }
+        div.left {
+            /* border: 1px dashed red; */
+            flex: 1;
+        }
+        div.left > ul {
+            background-color: #222;
+            color: white;
+            font-weight: bold;
+            list-style: none;
+        }
+        div.left > ul > li {
+            padding: 10px;
+            cursor: pointer;
+        }
+        div.left > ul > li:hover {
+            background-color: lightskyblue;
+        }
+        div.right {
+            /* border: 1px dashed blue; */
+            padding: 10px;
+            flex: 4;
+        }
+        div.footer > p {
+            border-top: 1px solid #222;
+            width: 90%;
+            margin: 10px auto;
+            text-align: center;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <div class="root">
+        <div class="top">
+            <h1><a href="#">LOGO</a></h1>
+        </div>
+        <div class="mid">
+            <div class="left">
+                <ul>
+                    <li>MENU1</li>
+                    <li>MENU2</li>
+                    <li>MENU3</li>
+                </ul>
+            </div>
+            <div class="right">
+                <h3>Hello world</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum unde molestias delectus enim. Similique ipsa nobis ea velit, excepturi officiis dolor minima quibusdam recusandae sed odit cum placeat soluta ducimus.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita laborum sequi itaque, aspernatur rerum dolor nulla sapiente reprehenderit. Ad blanditiis nam repudiandae consequuntur perferendis et molestias laboriosam ducimus voluptatibus pariatur!</p>
+            </div>
+        </div>
+        <div class="bot">
+
+        </div>
+
+        <div class="footer">
+            <p>ⓒcopy</p>
+        </div>
+
+    </div>
+    
+
+
+</body>
+</html>
