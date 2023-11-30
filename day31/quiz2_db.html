@@ -5,13 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        div.top {
+            border-top: 1px solid lightgrey;
+            border-bottom: 1px solid lightgrey;
+        }
+        body > div > div {
+            border: 1px solid green;
+        }
+        body > div > div > div {
+            border: 1px dashed red;
+        }
+        .frame {
+            width: 1400px;
+            margin: auto;
+        }
+        .sb {
+            display: flex;
+            justify-content: space-between;
+        }
 
     </style>
 </head>
 <body>
     
-    <div>첫줄
+    <div class="top">
         <div class="frame sb">
             <div>왼쪽영어메뉴</div>
             <div>오른쪽한글메뉴</div>
@@ -43,7 +64,11 @@
         </div>
         
     </div>
-    <div>사진줄</div>
+    <div>사진줄
+        <div class="frame">
+            <img src="">
+        </div>
+    </div>
 
 
 

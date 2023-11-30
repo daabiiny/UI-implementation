@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz1.html</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .frame {
+            width: 1280px;
+            margin: 0 auto;
+        }
+        body > div {
+            border: 2px dashed grey;
+        }
+        body > div > * {
+            border: 2px solid orangered;
+        }
+        body > div > * > * {
+            border: 2px dashed green;
+        }
+        .sa {
+            display: flex;
+            justify-content: space-around;
+        }
+        .sb {
+            display: flex;
+            justify-content: space-between;
+        }
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        div.top2 > ul {
+            padding-left: 0;
+            list-style: none;
+            flex: 9;
+        }
+        div.top2 > ul > li {
+            flex: 1;
+            font-size: 16px;
+            text-align: center;
+            margin: auto;
+        }
+        ol {
+            list-style: none;
+            display: none;
+            /* display: block; */
+        }
+        ul > li:hover > ol {
+            display: block;
+            text-align: left;
+        }
+        ol > li > a {
+            font-weight: normal;
+            text-decoration: none;
+        }
+        div.top2 > div.hamburger {
+            flex: 1;
+            font-size: 18px;
+            text-align: right;
+            /* margin: 20px 0; */
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        div.logo {
+            margin: 2px;
+        }
+        p.love {
+            font-size: 52px;
+        }
+        p.winner {
+            font-size: 52px;
+            color: rgb(0, 85, 175);
+            font-weight: bold;
+        }
+        h3 {
+            font-size: 30px;
+            padding-left: 10px;
+            color: rgb(0, 85, 175);
+            font-weight: bold;
+            border: 1px solid;
+        }
+        div.news {
+            border: 1px solid;
+        }
+        div.news div.image > img {
+            width: 500px;
+            padding: 10px;
+            margin: 8% auto;
+            border: 1px solid ;
+        }
+        div.news div.nh-news {
+            width: 500px;
+            padding: 10px;
+            margin: 8% auto;
+        }
+        div.newstitle {
+            font-size: 30px;
+            font-weight: lighter;
+            padding: 15px auto;
+
+        }
+        div.newsbutton {
+            width: fit-content;
+            background-color: rgb(0, 85, 175);
+            border-radius: 5px;
+            padding: 2px 10px;
+            color: white;
+            font-weight: bold;
+
+        }
+        div.news > div.left {
+            flex: 2;
+        }
+        div.news > div.right {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="top">
+        <div class="top1 frame sb">
+            <div class="logo"><img src="농협은행.PNG"></div>
+            <div class="sa">
+                <select class="language">
+                    <option>language</option>
+                    <option>한국어</option>
+                    <option>English</option>
+                    <option>日本語</option>
+                    <option>中國語</option>
+                </select>
+                <select class="banking">
+                    <option>Banking</option>
+                    <option>개인</option>
+                    <option>기업</option>
+                </select>
+            </div>
+        </div>
+        <div class="top2 frame sb">
+                <ul class="sb">
+                    <li>
+                        <a href="#">은행안내</a>
+                        <ol>
+                            <li><a href="#">CEO인사말</a></li>
+                            <li><a href="#">기업이념</a></li>
+                            <li><a href="#">연혁</a></li>
+                            <li><a href="#">조직도</a></li>
+                            <li><a href="#">찾아오시는길</a></li>
+                            <li><a href="#">영업점안내</a></li>
+                            <li><a href="#">공고</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#">윤리경영</a>
+                        <ol>
+                            <li><a href="#">윤리경영소개</a></li>
+                            <li><a href="#">윤리경영추진전략</a></li>
+                            <li><a href="#">윤리경영추진경과</a></li>
+                            <li><a href="#">윤리경영시스템</a></li>
+                            <li><a href="#">자주묻는질문</a></li>
+                            <li><a href="#">신고제도</a></li>
+                        </ol>
+                    </li>
+                    <li><a href="#">금융소비자보호</a></li>
+                    <li><a href="#">기업지배구조</a></li>
+                    <li><a href="#">경영정보</a></li>
+                    <li><a href="#">ESG경영</a></li>
+                    <li><a href="#">채용정보</a></li>
+                    <li><a href="#">홍보센터</a></li>
+                </ul>
+                <div class="hamburger center">≡</div>
+
+        </div>
+
+    </div>
+    <input type="color">
+    <div class="main">
+        <div class="text1 frame center">
+            <p class="love">사랑받는</p>
+            <p class="winner">일등 민족은행</p>
+        </div>
+        <div class="text2 frame center">농업인과 고객 모두가 행복한 금융을 만들어 갑니다</div>
+
+        <div class="news frame sb">
+            <div class="left">
+                <h3>NH뉴스</h3>
+                <div class="sb">
+                    <div class="image">
+                        <img src="https://www.nhbank.com/upload/nhnews/6052/imgpc_1.jpg">
+                    
+                    </div>
+                    <div class="nh-news">
+                        <div class="newsbutton">NH뉴스</div>
+                        <div class="newstitle">NH농협은행, 올원뱅크 생활금융서비스 신규 오픈 이벤트 실시</div>
+                        <div class="newssubtitle">NH농협은행, 올원뱅크 생활금융서비스 신규 오픈 이벤트 실시</div>
+                        <div class="leftdate">2023-11-06</div>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="more">더보기</div>
+            </div>
+        </div>
+
+        <div class="frame sa">
+            <div class="intro">소개</div>
+            <div class="info">경영정보</div>
+        </div>
+
+        <div class="voc frame">
+            고객의 소리
+        </div>
+    </div>
+
+    <div class="footer">
+    <div class="footer1 frame">하단</div>
+    </div>
+
+
+</body>
+</html>
