@@ -12,6 +12,9 @@
             margin: 0;
             padding: 0;
         }
+        a {
+            text-decoration: none;
+        }
         .frame {
             width: 1172px;
             margin: 0 auto;
@@ -42,13 +45,74 @@
         div.title {
             color: white;
         }
-        ul {
+        div.category > ul {
             list-style: none;
             display: flex;
+            justify-content: space-around;
             width: 100%;
-
+        }
+        div.category > ul > li {
+            border: 2px solid red;
+            margin: auto;
+            align-items: center;
+            
+        }
+        div.category > ul > li > img {
+            border: 2px solid darkblue;
+            align-content: center;
+            width: 50px;
+        }
+        div.category > ul > li > h4 {
+            font-size: 13px;
         }
         
+        div.box {
+           display: flex;
+           justify-content: space-between;
+        }
+        div.item {
+            border: 1px solid gray;
+            border-radius: 20px;
+            width: 360px;
+            height: 500px;
+        }
+        div.item > img {
+            border-radius: 20px 20px 0 0;
+            width: 360px;
+        }
+        div.subbox {
+           margin: 10px;
+           padding: 10px;
+        }
+        div.threebox {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        div.magam {
+            background-color: #DCE1E5;
+            color: #667380;
+            padding: 5px;
+            margin-right: 10px;
+            font-size: 13px;
+        }
+        div.open {
+            background-color: #FFF7DE;
+            color: #FF850A;
+            padding: 5px;
+            margin-right: 10px;
+            font-size: 13px;
+        }
+        div.gukbi {
+            background-color: #EBFAE8;
+            color: #3AB03F;
+            padding: 5px;
+            font-size: 13px;
+        }
+        div.free {
+            margin: 0;
+            padding: 0;
+            border-top: 1px solid lightgray;
+        }
 
 
     </style>
@@ -83,59 +147,144 @@
             </div>
             <img src="https://grepp-programmers.s3.amazonaws.com/production/file_resource/5513/PC_resize.png" width="850px"></div>
     </div>
-    <div class="category">
-        <div>
+    <div class="category frame">
             <ul>
                 <li>
-                    <a href="#">
-                        <button></button>
-                        <span>무료 국비 강의</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <button></button>
-                        <span>코딩테스트 문제</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <button></button>
-                        <span>수강 중인 강의</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <button></button>
-                        <span>채용 공고</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <button></button>
-                        <span>채용 프로그램</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <button></button>
-                        <span>스킬체크</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <button></button>
-                        <span>코딩역량인증시험</span>
-                    </a>
+                    <img src="1.PNG">
+                    <h4>무료 국비 강의</h4>
                 </li>
     
             </ul>
-    
-        </div>
-        
-    </div>  
+    </div>
 
-    <input type="color" name="" id="">
+    <div class="submain frame sb">
+        <h2>국비지원으로 개발자 커리어 시작!</h2>
+        <h3>더 보기 ></h3>
+    </div>
+
+    <div class="box frame sb">
+        <div class="item">
+            <img src="https://grepp-programmers.s3.amazonaws.com/production/file_resource/5111/Dev_Thumnail_Clouding_Application_v2.png">
+            <div class="subbox">
+                <div class="boxname">
+                    <h3>[1기] K-Digital Training: 클라우딩 어플리케이션 엔지니어링</h3>
+                </div>
+                <div class="boxname2">
+                    <div class="threebox">
+                        <div class="magam">모집 마감</div>
+                        <div class="open">오픈 알림 신청</div>
+                        <div class="gukbi">국비 지원</div>
+                    </div>
+                    <div class="free">
+                        <h3>무료</h3>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+        <div class="item">
+            <img src="https://grepp-programmers.s3.amazonaws.com/production/file_resource/4800/img_dev_thumnail_webfullcycle.png">
+            <div class="subbox">
+                <div class="boxname">
+                    <h3>[1기] K-Digital Training: 타입스크립트로 함께하는 웹 풀 사이클 개발(React,Node.js)</h3>
+                </div>
+                <div class="boxname2">
+                    <div class="threebox">
+                        <div class="magam">모집 마감</div>
+                        <div class="open">오픈 알림 신청</div>
+                        <div class="gukbi">국비 지원</div>
+                    </div>
+                    <div class="free">
+                        <h3>무료</h3>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+        <div class="item">
+            <img src="https://grepp-programmers.s3.amazonaws.com/production/file_resource/4792/img_dev_thumnail_data_analysis.png">
+            <div class="subbox">
+                <div class="boxname">
+                    <h3>[1기] K-Digital Training: 데이터 분석 데브코스</h3>
+                </div>
+                <div class="boxname2">
+                    <div class="threebox">
+                        <div class="magam">모집 마감</div>
+                        <div class="open">오픈 알림 신청</div>
+                        <div class="gukbi">국비 지원</div>
+                    </div>
+                    <div class="free">
+                        <h3>무료</h3>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+    <div class="box frame sb">
+        <div class="item">
+            <img src="https://grepp-programmers.s3.amazonaws.com/production/file_resource/2844/Dev_Thumnail_Linux_System__2_.png">
+            <div class="subbox">
+                <div class="boxname">
+                    <h3>[1기] K-Digital Training: 리눅스 시스템 및 커널 전문가</h3>
+                </div>
+                <div class="boxname2">
+                    <div class="threebox">
+                        <div class="magam">모집 마감</div>
+                        <div class="open">오픈 알림 신청</div>
+                        <div class="gukbi">국비 지원</div>
+                    </div>
+                    <div class="free">
+                        <h3>무료</h3>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+        <div class="item">
+            <img src="https://grepp-programmers.s3.amazonaws.com/production/file_resource/2765/Dev_Thumnail_Data_Engineering.png">
+            <div class="subbox">
+                <div class="boxname">
+                    <h3>[1기] K-Digital Training: 데이터 엔지니어링 데브코스</h3>
+                </div>
+                <div class="boxname2">
+                    <div class="threebox">
+                        <div class="magam">모집 마감</div>
+                        <div class="open">오픈 알림 신청</div>
+                        <div class="gukbi">국비 지원</div>
+                    </div>
+                    <div class="free">
+                        <h3>무료</h3>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+        <div class="item">
+            <img src="https://grepp-programmers.s3.amazonaws.com/production/file_resource/3796/Dev_Thumnail_FrontEnd-Engineering.png">
+            <div class="subbox">
+                <div class="boxname">
+                    <h3>[1기] K-Digital Training: 빅데이터 플랫폼 프론트엔드 엔지니어링</h3>
+                </div>
+                <div class="boxname2">
+                    <div class="threebox">
+                        <div class="magam">모집 마감</div>
+                        <div class="open">오픈 알림 신청</div>
+                        <div class="gukbi">국비 지원</div>
+                    </div>
+                    <div class="free">
+                        <h3>무료</h3>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+       
+     
+    <div>
+        <input type="color" name="" id="">
+    </div>
 
 
 
