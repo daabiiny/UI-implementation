@@ -20,13 +20,13 @@
             margin: 0 auto;
         }
         body > div {
-            border: 2px dashed grey;
+            /* border: 2px dashed grey; */
         }
         body > div > * {
-            border: 2px dashed orangered;
+            /* border: 2px dashed orangered; */
         }
         body > div > * > * {
-            border: 2px dashed green;
+            /* border: 2px dashed green; */
         }
         .sa {
             display: flex;
@@ -36,34 +36,42 @@
             display: flex;
             justify-content: space-between;
         }
-        div.top {
-           
-        }
+       
         div.main {
             background-color: rgb(57, 63, 157);
         }
         div.title {
             color: white;
+            margin: auto;
+            width: 900px;
+        }
+        div.title > h3 {
+            font-weight: lighter;
+        }
+        div.title > h1 {
+            font-size: 25px;
         }
         div.category > ul {
             list-style: none;
             display: flex;
             justify-content: space-around;
-            width: 100%;
-        }
-        div.category > ul > li {
-            border: 2px solid red;
-            margin: auto;
-            align-items: center;
             
         }
+        div.category > ul > li {
+            text-align: center; 
+        }
         div.category > ul > li > img {
-            border: 2px solid darkblue;
+            border: 1px solid #dce1e5;
             align-content: center;
+            margin-top: 10px;
+            padding: 10px;
             width: 50px;
+            border-radius: 20px;
+            
         }
         div.category > ul > li > h4 {
-            font-size: 13px;
+            font-size: 17px;
+            font-weight: 100;
         }
         
         div.box {
@@ -145,7 +153,10 @@
                 <h1>박승규 저자 무료 강의</h1>
                 <h3>12월 20일(수) 오후 7시 @강남 강의장</h3>
             </div>
-            <img src="https://grepp-programmers.s3.amazonaws.com/production/file_resource/5513/PC_resize.png" width="850px"></div>
+            <div class="budam">
+                <img src="https://grepp-programmers.s3.amazonaws.com/production/file_resource/5513/PC_resize.png" width="850px">
+            </div>
+        </div>
     </div>
     <div class="category frame">
             <ul>
@@ -154,6 +165,35 @@
                     <h4>무료 국비 강의</h4>
                 </li>
     
+                <li>
+                    <img src="2.PNG">
+                    <h4>코딩테스트 문제</h4>
+                </li>
+    
+                <li>
+                    <img src="3.PNG">
+                    <h4>수강 중인 강의</h4>
+                </li>
+    
+                <li>
+                    <img src="4.PNG">
+                    <h4>채용 공고</h4>
+                </li>
+    
+                <li>
+                    <img src="5.PNG">
+                    <h4>채용 프로그램</h4>
+                </li>
+    
+                <li>
+                    <img src="6.PNG">
+                    <h4>스킬체크</h4>
+                </li>
+    
+                <li>
+                    <img src="7.PNG">
+                    <h4>코딩역량인증시험</h4>
+                </li>
             </ul>
     </div>
 
