@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* color : #535353;
+        */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        ul, ol {
+            list-style: none;
+            padding-left: 0;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            margin: 0;
+            
+        }
+        .textColor1 {
+            color: #008BCE;
+        }
+        header {
+            width: 100%;
+            border-bottom: 1px solid lightgray;
+            position: fixed; /* scroll을 무시하는건 fixed , 따라가는건 absolute */
+            top: 0;
+            background-color: white;
+            z-index: 5;
+            /* 요소가 겹칠때 씀 */
+        }
+        header + main {
+            margin-top: 62px;
+        }
+        footer {
+            background-color: #313131;
+            height: 230px;
+        }
+        .inner { 
+            margin: 0 auto;
+            padding: 0;
+            max-width: 1200px;
+            /* border-left: 2px dashed green;
+            border-right: 2px dashed green; */
+        }
+        .flex {
+            display: flex;
+        }
+        .sb {
+            display: flex;
+            justify-content: space-between;
+        }
+        .sa {
+            display: flex;
+            justify-content: space-around;
+        }
+        .rel {
+            position: relative;
+        }
+        .logo {
+           max-width: 250px;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           
+           /* border: 2px solid saddlebrown; */
+        }
+        div.logo > img {
+           max-width: 250px;
+           align-items: center;
+           display: flex;
+           justify-content: center;
+           overflow: hidden;
+        }
+        div.noLogo {
+            width: 900px;
+            border-right: 1px solid lightgray;
+            border-left: 1px solid lightgray;
+        }
+
+        input[type="text"] {
+            border-radius: 5px;
+            border: 1px solid gray;
+        }
+        nav {
+            align-items: center;
+            width: 900px;
+            border-top: 1px solid lightgray;
+        }
+        div > ul {
+            display: flex;
+            
+        }
+        div > ul > li {
+            padding-top: 0;
+            padding-inline: 5px;
+        }
+        
+        nav {
+            text-align: center;
+        }
+        nav > ul {
+            
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            padding: 0;
+        }
+        div > ul > li {
+            text-align: center;
+            font-size: 13px;
+            
+        }
+        nav > ul > li {
+            font-size: 14px;
+            text-align: center;
+            padding: 0;
+        }
+       
+        div.product {
+            margin-top: 20px;
+        }
+        div.product > img {
+            margin-top: 50px;
+        }
+        div.bluebox {
+            background-color: #f6f6f6;
+            height: 60px;
+            width: 500px;
+            align-items: flex-end;
+        }
+       
+        div.left-nemo, 
+        div.left-won {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin-left: 10px;
+        }
+        div.small-1,
+        div.small-2,
+        div.small-3,
+        div.small-4 {
+            width: 10px;
+            height: 10px;
+            background-color: #d9d9d9;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+        div.small-1,
+        div.small-2,
+        div.small-3{
+            margin-right: 5px;
+        }
+        div.small-2 {
+            background-color: #008BCE;
+        }
+        .left-arrow,
+        .right-arrow {
+            color: white;
+            height: 60px;
+            width: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            background-color: #008BCE;
+        }
+        .left-arrow {
+            margin-right: 5px;
+        }
+        section.main2,
+        section.main3, 
+        section.main4,
+        section.main5, 
+        section.main6 {
+            margin-top: 20px;
+        }
+        div.box1 {
+            border: 1px solid gray;
+            width: 785px;
+            height: 260px;
+            
+        }
+        div.left-won {
+            width: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        div.won-1,
+        div.won-2,
+        div.won-3,
+        div.won-4,
+        div.won-5 {
+            width: 10px;
+            height: 10px;
+            background-color: #d9d9d9;
+            border-radius: 100%;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+        div.won-1,
+        div.won-2,
+        div.won-3,
+        div.won-4 {
+            margin-right: 5px;
+        }
+        div.won-2 {
+            background-color: #008BCE;
+            
+        }
+        div.main2text,
+        div.main4text {
+            padding: 40px;
+            font-size: 14px;
+        }
+        div.main2text-title {
+            color: #1c99d1;
+            font-weight: bold;
+            padding-bottom: 10px;
+        }
+        div.main4text-title {
+            font-weight: bold;
+            padding-bottom: 10px;
+        }
+        div.box2 {
+            width: 370px;
+            height: 260px;
+            border: 1px solid navy;
+        }
+        div.yellowbox {
+            background-color: #ffE400;
+            font-weight: bold;
+            width: 185px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+        div.yellowbox > div {
+            padding: 10px;
+        }
+        div.graybox {
+            background-color: #D7D7D7;
+            color: white;
+            font-weight: bold;
+            width: 185px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+         div.graybox > div {
+            padding: 10px;
+        }
+        div.item {
+            width: 370px;
+            height: 200px;
+            margin: 10px 0;
+           
+        }
+        div.yellowbox-1 {
+            background-color: #ffE400;
+            font-weight: bold;
+            width: 370px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+        div.yellowbox-1 > div {
+            padding: 10px;
+        }
+        div.sponsor {
+            padding: 80px 40px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+
+        }
+        div.box2detail {
+            padding: 10px;
+        }
+        div.detail {
+            font-size: 15px;
+        }
+        div.box2tab {
+            padding: 10px;
+            width: 350px;
+            height: 205px;
+        }
+        div.detail > div {
+            padding-left: 10px;
+            font-size: 14px;
+        }
+        div.detailimage {
+            width: 130px;
+            height: 90px;
+        }
+        .footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        div.footer-detail {
+            padding: 50px;
+            display: flex;
+        }
+        div.company > h2 {
+            color: #FCFCFC;
+            padding-bottom: 20px;
+        }
+        footer > div > div > h3 {
+            color: #C7C7C7;
+            font-size: 15px;
+            padding-bottom: 20px;
+            
+        }
+        footer > div > div > hr {
+            color: #C7C7C7;
+            width: 267px;
+        }
+        
+        footer > div > div > h4 {
+            color: #7a7a7a;
+            font-size: 12px;
+            font-weight: lighter;
+            padding-top: 20px;
+        }
+        
+        div.contact,
+        div.information {
+            margin-left: 50px;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+    <header>
+        <div class="inner sb">
+            <div class="logo"><img src="로고.png"></div>
+            <div class="noLogo">
+
+                <div class="sb inner">
+                    <ul class="left">
+                        <li><img src="f.png"></li>
+                        <li><img src="B.png"></li>
+                        <li><img src="p.png"></li>
+                        <li><img src="y.png"></li>
+                    </ul>
+                    <ul class="right">
+                        <li><a href="">로그인</a></li>
+                        <li><a href="">회원가입</a></li>
+                        <li><input type="text" name="search" placeholder="검색"></li>
+                    </ul>
+                </div>
+                <nav class="category">
+                    <ul>
+                        <li><a href="">이벤트</a></li>
+                        <li><a href="">공지▾</a></li>
+                        <li><a href="">메인리뷰▾</a></li>
+                        <li><a href="">회원리뷰▾</a></li>
+                        <li><a href="">소식▾</a></li>
+                        <li><a href="">게임▾</a></li>
+                        <li><a href="">커뮤니티▾</a></li>
+                        <li><a href="">장터▾</a></li>
+                        <li><a href="">특가</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="main1 inner">
+            <div class="product">
+                <img src="computer.jpg">
+            </div>
+            <div class="bluebox">
+                <div class="sixnemo sb">
+                    <div class="left-nemo sb">
+                        <div class="small-1"> </div>
+                        <div class="small-2"> </div>
+                        <div class="small-3"> </div>
+                        <div class="small-4"> </div>
+                    </div>
+                    <div class="right-nemo sb">
+                        <div class="left-arrow">&lt;</div>
+                        <div class="right-arrow">&gt;</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="main2 inner">
+            <div class="main2detail sb">
+                <div class="box1 sb">
+                    <div class="main2image">
+                        <img src="product1.jpg">
+                        <div class="left-won sa">
+                            <div class="won-1"> </div>
+                            <div class="won-2"> </div>
+                            <div class="won-3"> </div>
+                            <div class="won-4"> </div>
+                            <div class="won-5"> </div>
+                        </div>
+                    </div>
+                    <div class="main2text">
+                        <div class="main2text-title">GIGABYTE GeForce RTX 4060 Ti Gaming...</div>
+                        <div class="main2text-detail">NVIDIA RTX 4000시리즈의 메인스트림의 시작이라고 할 수 있는 RTX 4060 Ti가 출시되었습니다.
+
+                            성능은 메인스트림에 맞으나 가격이 소비자의 기대에 크게 벗어나 판매량 부진을 겪고 있는 제품이기도 한데, NVIDIA가 Ai쪽에만 신경쓰다보니 배짱장사를 한다는 평가를 받는 중으로 경쟁사인 AMD의 부진 역시 원인으로 지목되고 있습니다. </div>
+                    </div>
+                </div>
+                <div class="box2">
+                    <div class="box2title sb">
+                        <div class="yellowbox sb">
+                            <div>이벤트 & 특가</div>
+                            <div>+</div>
+                        </div>
+                        <div class="graybox sb">
+                            <div>플웨즈 공지</div>
+                            <div>+</div>
+                        </div>
+                    </div>
+                    <div class="box2detail">
+                        <div class="detail sb">
+                            <div>> WD_BLACK AN1500 SSD 댓글 이벤트</div>
+                            <div class="textColor1">29</div>
+                            <div>2020-12-23</div>
+                        </div>
+                        <div class="detail sb">
+                            <div>> 씨게이트 바라쿠다 2TB 최저가 맞추기</div>
+                            <div class="textColor1">815</div>
+                            <div>2018-11-21</div>
+                        </div>
+                        <div class="detail sb">
+                            <div>> 컬러풀 삼행시 짓고 LOL 결승가자! 댓글</div>
+                            <div class="textColor1">11</div>
+                            <div>2018-10-23</div>
+                        </div>
+                        <div class="detail sb">
+                            <div>> (재선정)씨게이트 14TB HDD 런칭 기념</div>
+                            <div class="textColor1">159</div>
+                            <div>2018-10-19</div>
+                        </div>
+                        <div class="detail sb">
+                            <div>> 컬러풀 CN600S SSD 240GB 퀴즈 이벤</div>
+                            <div class="textColor1">78</div>
+                            <div>2018-10-16</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="main3 inner">
+            <div class="sb rel">
+                <div class="item">
+                    <div class="banner-image"><img src="ban2.jpg"></div>
+                </div>
+                <div class="item">
+                    <div class="banner-image"><img src="ban1.jpg"></div>
+                </div>
+                <div class="item">
+                    <div class="banner-image"><img src="ban3.jpg"></div>
+                </div>
+        </section>
+
+        <section class="main4 inner">
+            <div class="main4detail sb">
+                <div class="box1 sb">
+                    <div class="main4text">
+                            <div class="main4text-title">MSI 모니터, 여수EXPO '2023 한중일 이스포츠 대...</div>
+                            <div class="main4text-detail">MSI 모니터, 여수EXPO ‘2023 한중일 이스포츠 대회’서 체험 부스 운영! 12월 15일 ~ 17일 MSI 모니터 부스 운영, 인기 모니터 체험부터 푸짐한 경품 이벤트까지
+                               ‘2023 한중일 이스포츠 대회’ 공식 모니터 ‘MSI G244F’ 직접 체험할 기회 열어</div>
+                    </div>
+                    <div class="main4image">
+                        <img src="esport.jpg">
+                        <div class="left-won sa">
+                            <div class="won-1"> </div>
+                            <div class="won-2"> </div>
+                            <div class="won-3"> </div>
+                            <div class="won-4"> </div>
+                            <div class="won-5"> </div>
+                        </div>
+                    </div>
+                </div>    
+                
+                <div class="box2">
+                    <div class="box2title sb">
+                        <div class="yellowbox sb">
+                            <div>H/W 견적</div>
+                            <div>+</div>
+                        </div>
+                       
+                    </div>
+                    <div class="box2detail">
+                        <div class="detail sb">
+                            <div>> 메인 컴퓨터 구입 및 견적 문의</div>
+                            <div> </div>
+                            <div>2023-04-07</div>
+                        </div>
+                        <div class="detail sb">
+                            <div>> 요즘 완제품이 더 싼 것 같네요...</div>
+                            <div class="textColor1">1</div>
+                            <div>2021-04-19</div>
+                        </div>
+                        <div class="detail sb">
+                            <div>> 고수님들 도와주세요ㅠ 컴맹 살려주십시</div>
+                            <div> </div>
+                            <div>2021-02-06</div>
+                        </div>
+                        <div class="detail sb">
+                            <div>> 견적 봐주시면 감사하겠습니다ㅠㅠ음악</div>
+                            <div class="textColor1">29</div>
+                            <div>2021-01-03</div>
+                        </div>
+                        <div class="detail sb">
+                            <div>>가볍게 구성을 한 번 해보았습니다.</div>
+                            <div></div>
+                            <div>2020-09-18</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="main5 inner">
+            <div class="sb rel">
+                <div class="box2">
+                    <div class="yellowbox-1 sb">
+                        <div>∨ H/W 게시판</div>
+                        <div>+</div>
+                    </div>
+    
+                    <div class="box2detail">
+                        <div class="detail sb">
+                            <div>AMD 시스템에 사용하는 그래픽카드</div>
+                            <div>2023-07-04</div>
+                        </div>
+                        <div class="detail sb">
+                            <div>채굴 용도로 사용하던 사파이어 라...</div>
+                            <div>2023-03-18</div>
+                        </div>
+                        <div class="detail sb">
+                            <div>이번 AMD 라이젠 라파엘 출시로 P...</div>
+                            <div>2022-09-28</div>
+                        </div>
+                        <div class="detail sb">
+                            <div>5년 만에 그래픽 카드를 MSI 지프스...</div>
+                            <div>2022-05-01</div>
+                        </div>
+                        <div class="detail sb">
+                            <div>PCle4.0 미친 속도 씨게이트 파이...</div>
+                            <div>2021-08-30</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box2">
+                    <div class="box2title sb">
+                        <div class="yellowbox sb">
+                            <div>인기 회원리뷰</div>
+                            <div>+</div>
+                        </div>
+                        <div class="graybox sb">
+                            <div>회원리뷰</div>
+                            <div>+</div>
+                        </div>
+                    </div>
+                    <div class="box2tab">
+                        <div class="detail sb">
+                            <div class="detailimage"><img src="review1.jpg"></div>
+                            <div class="detailtext">Dr.MOS 전원부 바이오스타 B650MT-E PRO 제이씨현에서 새롭게 선보이는 바이오스타 2023-12-12</div>
+                        </div>
+                        <div class="detail sb">
+                            <div class="detailimage"><img src="review2.jpg"></div>
+                            <div class="detailtext">스트림텍 플러스 초보사양 00:00 개봉 01:43 설치 02:14 전력소비 02:32 시야각 2023-12-12</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box2">
+                    <div class="box2title sb">
+                        <div class="yellowbox sb">
+                            <div>H/W 갤러리</div>
+                            <div>+</div>
+                        </div>
+                        <div class="graybox sb">
+                            <div>자유갤러리</div>
+                            <div>+</div>
+                        </div>
+                    </div>
+                    <div class="box2tab">
+                        <div class="detail sb">
+                            <div class="detailimage"><img src="review3.jpg" width="130px"></div>
+                            <div class="detailtext">외장 SSD 추천 씨게이트... 디지털 콘텐츠의 생산과 사용이 일상화된 현대를 살아가는 사람들에 2022-06-19</div>
+                        </div>
+                        <div class="detail sb">
+                            <div class="detailimage"><img src="review4.jpg"></div>
+                            <div class="detailtext">스트림텍 플러스 초보사양 00:00 개봉 01:43 설치 02:14 전력소비 02:32 시야각 2023-12-12</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="main6 inner">
+            <div class="sb rel">
+                <div class="box2">
+                    <div class="yellowbox-1 sb">
+                        <div>∨ 게임게시판</div>
+                        <div>+</div>
+                    </div>
+    
+                    <div class="box2detail">
+                        <div class="detail sb">
+                            <div>클래시로얄 연전연승 달리는 중</div>
+                            <div>2023-12-13</div>
+                        </div>
+                        <div class="detail sb">
+                            <div>네이버 치지직 선구자로 따효니?</div>
+                            <div>2023-12-08</div>
+                        </div>
+                        <div class="detail sb">
+                            <div>오랜만에 꿀잼게임 히어로랜드</div>
+                            <div>2023-11-25</div>
+                        </div>
+                        <div class="detail sb">
+                            <div>환세취호전 플러스 한정판 추가 판...</div>
+                            <div>2023-11-23</div>
+                        </div>
+                        <div class="detail sb">
+                            <div>엔씨 프로젝트G 대박이네요</div>
+                            <div>2023-11-17</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box2">
+                    <div class="yellowbox-1 sb">
+                        <div>∨ 자유게시판</div>
+                        <div>+</div>
+                    </div>
+    
+                    <div class="box2detail">
+                        <div class="detail sb">
+                            <div>휘슬 자동차검사 서비스 시작</div>
+                            <div>2023-12-18</div>
+                        </div>
+                        <div class="detail sb">
+                            <div>이제 연말이 얼마 남지 않았네요</div>
+                            <div>2023-12-15</div>
+                        </div>
+                        <div class="detail sb">
+                            <div>휘슬 사용 후기(꿀팁공유)</div>
+                            <div>2023-12-14</div>
+                        </div>
+                        <div class="detail sb">
+                            <div>오랜만에 왔네요</div>
+                            <div>-2023-12-13</div>
+                        </div>
+                        <div class="detail sb">
+                            <div>게임 스콘</div>
+                            <div>2023-12-01</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box2">
+                    <div class="yellowbox-1 sb">
+                        <div>∨ 종합 QnA</div>
+                        <div>+</div>
+                    </div>
+    
+                    <div class="box2detail">
+                        <div class="detail sb">
+                            <div>모니터 화면이 나오지 않습니다.</div>
+                            <div>2023-09-02</div>
+                        </div>
+                        <div class="detail sb">
+                            <div>기가바이트 어로스 FI27Q 모니터...</div>
+                            <div>2023-04-25</div>
+                        </div>
+                        <div class="detail sb">
+                            <div>asus z170 maximus viii formula 갑...</div>
+                            <div>2022-09-11</div>
+                        </div>
+                        <div class="detail sb">
+                            <div>사운드바에서 화이트노이즈 같은게...</div>
+                            <div>2022-02-19</div>
+                        </div>
+                        <div class="detail sb">
+                            <div>USB3.1(구USB3.0)과 SATA3 케이블...</div>
+                            <div>2021-12-09</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="main7 inner">
+            <div class="sponsor sa">
+                <div><img src="sponsor1.jpg"></div>
+                <div><img src="sponsor2.jpg"></div>
+                <div><img src="sponsor3.jpg"></div>
+                <div><img src="sponsor4.jpg"></div>
+                <div><img src="sponsor5.jpg"></div>
+                <div><img src="sponsor6.jpg"></div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-detail inner">
+            <div class="company">
+                <h2>플레이웨어즈</h2>
+                <h4>대표 : 박성진<br>
+                    Copyright 2015 PLAYWARES. All rights reserved.
+                </h4>
+            </div>
+            <div class="contact">
+                    <h3>CONTACT US ∨</h3>
+                    <hr>
+                    <h4>이메일 : webmaster@playwares.com <br>
+                        주소 : 서울시 금천구 가산디지털 1로 STX-V타워 704호</h4>
+                
+            </div>
+            <div class="information">
+                    <h3>INFORMATION ∨</h3>
+                    <hr>
+                    <h4>요청/건의<br>
+                        개인정보취급방침<br>
+                        광고/제휴 문의</h4>
+                
+            </div>
+
+        </div>
+
+    </footer>
+
+
+</body>
+</html>
